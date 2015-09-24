@@ -6,5 +6,5 @@ JOIN Customer cust
 ON inv.CustomerId = cust.CustomerId
 JOIN Employee emp
 ON cust.SupportRepId = emp.EmployeeId
-WHERE inv.InvoiceDate LIKE '%2009%'
+WHERE inv.InvoiceDate LIKE '%2010%'
 GROUP BY emp.EmployeeId)
