@@ -1,4 +1,4 @@
-SELECT [Sales Rep],  '$' || MAX([Total Sales]) AS 'Sales Leader 2009'
+SELECT [Sales Rep],  '$' || MAX([Total Sales]) AS 'Sales Leader 2010'
 FROM
 (SELECT DISTINCT emp.FirstName || ' ' || emp.LastName AS 'Sales Rep', SUM(inv.Total) AS 'Total Sales'
 FROM Invoice inv
