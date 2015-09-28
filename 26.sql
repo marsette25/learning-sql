@@ -1,8 +1,9 @@
-SELECT Track.Name, COUNT(*)
+SELECT Track.Name, Track.Composer, COUNT(*)
 FROM InvoiceLine
 JOIN Track ON InvoiceLine.TrackId == Track.TrackId
 JOIN Invoice ON Invoice.InvoiceId == InvoiceLine.InvoiceId
-WHERE Invoice.InvoiceDate LIKE '2013%'
-GROUP BY Track.Name
+GROUP BY Track.Composer
 ORDER BY COUNT(*) DESC
-LIMIT 1
+LIMIT 3
+
+26.Provide a query that shows the top 3 best selling artists.
